@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academic Planner</title>
+<meta name="description" content="Interactive academic task planner.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">Abdulsemiu Abdulsalam
+      <span class="id-line">STUDENT ID: 301850185</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">Menu ☰</button>
+    <ul class="folder-nav" id="mainNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="planner.html" aria-current="page">Academic Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="section planner-section" style="border-bottom:none;">
+      <div class="planner-intro">
+        <span class="eyebrow">Academic Planner</span>
+        <h1>Organize your studies with clarity</h1>
+        <p>Capture deadlines, prioritize important coursework, and keep your academic workload under control from one polished dashboard.</p>
+      </div>
+
+      <!-- ============ TASK ENTRY FORM ============ -->
+      <form id="task-form" class="planner-form" novalidate>
+        <div class="planner-input-group">
+          <label for="task-title" class="planner-field-label">Task title</label>
+          <input type="text" id="task-title" name="task-title" placeholder="e.g. Prepare presentation for COS 106" autocomplete="off">
+        </div>
+
+        <div class="planner-input-group">
+          <label for="task-due" class="planner-field-label">Due date</label>
+          <input type="date" id="task-due" name="task-due">
+        </div>
+
+        <div class="planner-input-group planner-input-group--select">
+          <label for="task-priority" class="planner-field-label">Priority</label>
+          <select id="task-priority" name="task-priority">
+            <option value="Low">Low priority</option>
+            <option value="Medium" selected>Medium priority</option>
+            <option value="High">High priority</option>
+          </select>
+        </div>
+
+        <div class="planner-actions">
+          <button type="submit" class="btn btn-primary planner-submit-btn">＋ Add Task</button>
+          <button type="button" id="cancel-edit" class="btn btn-ghost" style="display:none; margin-left:0.75rem;">Cancel</button>
+        </div>
+      </form>
+      <p class="planner-error" id="form-error" role="alert"></p>
+
+      <!-- ============ STATS ============ -->
+      <div class="planner-stats" id="stats">
+        <div class="planner-stat-card"><strong id="stat-total">0</strong><span>Total tasks</span></div>
+        <div class="planner-stat-card"><strong id="stat-done">0</strong><span>Completed</span></div>
+        <div class="planner-stat-card"><strong id="stat-pending">0</strong><span>Pending</span></div>
+      </div>
+      <div class="planner-progress" aria-label="Task completion progress">
+        <div class="planner-progress__top">
+          <strong id="stat-complete-rate">0%</strong>
+          <span>Progress overview</span>
+        </div>
+        <div class="planner-progress__bar" aria-hidden="true">
+          <div class="planner-progress__fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- ============ TASK LIST (populated by JavaScript) ============ -->
+      <div class="planner-list-shell">
+        <div class="planner-list-head">
+          <span>Priority tasks</span>
+          <span>Manage your week</span>
+        </div>
+        <ul id="task-list"></ul>
+        <p class="empty-state" id="empty-state">No tasks yet — add your first one above to begin planning.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Alex Carter · Built for COS 106, Introduction to Web Technologies ·</p>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

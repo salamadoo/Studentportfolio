@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<meta name="description" content="Get in touch with Alex Carter.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">Abdulsemiu Abdulsalam
+      <span class="id-line">STUDENT ID: 301850185</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">Menu ☰</button>
+    <ul class="folder-nav" id="mainNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="planner.html">Academic Planner</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="section" style="border-bottom:none;">
+      <span class="eyebrow">Contact</span>
+      <h1>Let’s connect</h1>
+      <p>Whether you want to discuss a project, ask a question, or simply say hello, I’d be glad to hear from you. Please use the form below and I’ll get back to you as soon as possible.</p>
+
+      <div class="grid-2">
+        <!-- ============ CONTACT FORM ============ -->
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name">
+            <p class="field-error" id="name-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="text" id="email" name="email" autocomplete="email">
+            <p class="field-error" id="email-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="text" id="phone" name="phone" autocomplete="tel">
+            <p class="field-error" id="phone-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+            <p class="field-error" id="message-error"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary contact-submit-btn">Send message</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+
+        <!-- ============ CONTACT DETAILS ============ -->
+        <div class="card">
+          <h3>Other ways to reach me</h3>
+          <ul>
+            <li>Email: <a href="mailto:a.abdulsalam0185@miva.edu.ng">a.abdulsalam0185@miva.edu.ng</a></li>
+            <li>GitHub: <a href="https://github.com/YoungElhajj" target="_blank" rel="noopener">github.com/YoungElhajj</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/engr.abdulsalam1?igsh=eXRoMHh2bjNuamcz/" target="_blank" rel="noopener">instagram.com/engr.abdulsalam1</a></li>
+            <li>Location: Lagos, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Abdulsemiu Abdulsalam · Built for COS 106, Introduction to Web Technologies</p>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
